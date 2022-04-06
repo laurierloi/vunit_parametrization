@@ -23,6 +23,9 @@ class ParametrizeTest():
             combined_dicts.append(d)
         return combined_dicts
 
+# Add tests to the testbench using the parameter dict
+#  it could probably be replaced by a python fixture, but I'm not clear on the
+#  way to do so at this point.
 def add_sync_tests(util, params, tb="sync_tb"):
     tb_sync = util.add_test_bench(tb)
     parametrize = ParametrizeTest(params)
